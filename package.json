@@ -1,0 +1,30 @@
+{
+  "name": "aguayo-frontend-test",
+  "version": "0.1.0",
+  "description": "aguayo frontend test",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bntzio/aguayo-frontend-test.git"
+  },
+  "author": "Enrique Benitez <hello@bntz.io> (https://bntz.io)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/bntzio/aguayo-frontend-test/issues"
+  },
+  "homepage": "https://github.com/bntzio/aguayo-frontend-test#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
+    "minireset.css": "^0.0.3",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.0",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^3.0.0",
+    "rucksack-css": "^1.0.2"
+  }
+}
