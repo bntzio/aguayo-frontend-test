@@ -4,6 +4,7 @@
   --primaryColor: #fe7676;
   --fontSize: 16px;
   --fontFamily: 'Montserrat', sans-serif;
+  --fontFamilyAlternate: 'Roboto', sans-serif;
 }
 
 @custom-media --tablet (min-width: 768px);

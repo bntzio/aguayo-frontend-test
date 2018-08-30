@@ -1,6 +1,5 @@
 .hero {
   width: 100%;
-  @mixin rem height, 448;
   position: relative;
   display: block;
 

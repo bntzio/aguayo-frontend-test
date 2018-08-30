@@ -1,0 +1,141 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @mixin rem margin-top, -4;
+
+  &__title {
+    @mixin rem margin-top, 30;
+    font-size: responsive 2rem 5rem;
+    font-weight: 300;
+    color: black;
+    span {
+      color: var(--primaryColor);
+    }
+    @media (--tablet) {
+      @mixin rem margin-top, 90;
+    }
+  }
+  &__subtitle {
+    color: #4a4a4a;
+    font-weight: 500;
+    letter-spacing: 5.44px;
+    font-size: responsive .5rem calc(1rem - 2px);
+  }
+
+  &__area {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    @mixin rem padding-top, 44;
+
+    @media (--tablet) {
+      @mixin rem padding-top, 77;
+      @mixin rem padding-right, 20;
+      @mixin rem padding-left, 20;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @mixin rem margin-bottom, 90;
+
+      @media (--tablet) {
+        @mixin rem margin-bottom, 110;
+      }
+
+      &__image {
+        align-self: center;
+
+        img {
+          @mixin rem margin-bottom, 25;
+          @mixin rem width, 250;
+          @mixin rem height, 350;
+
+          @media (--tablet) {
+            @mixin rem margin-bottom, 10;
+            @mixin rem width, 300;
+            @mixin rem height, 450;
+          }
+        }
+      }
+
+      &__info {
+        @mixin rem width, 250;
+
+        @media (--tablet) {
+          @mixin rem width, 300;
+        }
+
+        &__description {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1.5px solid black;
+          padding-bottom: 1rem;
+
+          p {
+            line-height: 1.5rem;
+            font-weight: 700;
+            color: black;
+            width: 70%;
+          }
+          span {
+            align-self: center;
+            color: white;
+            background: black;
+            border-radius: 50%;
+            font-weight: 400;
+            font-family: var(--fontFamilyAlternate);
+            font-size: responsive 1rem 1.3rem;
+            @mixin rem padding, 10;
+          }
+
+          &--price {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1rem;
+
+            p {
+              font-size: responsive .8rem 1.2rem;
+              font-weight: 500;
+              line-height: 1.1rem;
+
+              @media (--tablet) {
+                line-height: 1.5rem;
+              }
+            }
+            span {
+              position: relative;
+              padding: 0;
+              align-self: center;
+              color: black;
+              background: none;
+              border-radius: 0;
+              font-weight: 300;
+              font-size: responsive 1.3rem 1.5rem;
+            }
+          }
+        }
+      }
+
+      &__thumbnail {
+        display: block;
+        margin: 0 auto;
+        @mixin rem margin-top, 10;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-image: url('/assets/images/thumbnail.png');
+        background-size: contain;
+
+        @media (--tablet) {
+          @mixin rem margin-top, 14;
+          width: 3.4rem;
+          height: 3.4rem;
+        }
+      }
+    }
+  }
+}
