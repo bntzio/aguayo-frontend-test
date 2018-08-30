@@ -33,7 +33,7 @@
         font-size: 1.2rem !important;
         margin-bottom: 2.5rem;
         opacity: 0.3;
-        transition: .9s ease-in all;
+        transition: .7s ease-in all;
         margin-right: 0;
 
         &:first-child {
