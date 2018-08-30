@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const postcss = require('gulp-postcss')
+const rename = require('gulp-rename')
 const atImport = require('postcss-import')
 const mixins = require('postcss-mixins')
 const cssnested = require('postcss-nested')
@@ -35,6 +36,7 @@ gulp.task('css', () => {
 
   return gulp.src('./src/styles/main.css')
     .pipe(postcss(processors))
+    .pipe(rename('main.min.css'))
     .pipe(gulp.dest('./dist/styles'))
     .pipe(browserSync.stream())
 })
