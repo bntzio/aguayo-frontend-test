@@ -1,0 +1,37 @@
+.hero {
+  width: 100%;
+  @mixin rem height, 448;
+  position: relative;
+  display: block;
+
+  div {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    @media (--tablet) {
+      top: 12%;
+    }
+
+    p {
+      padding: 2px 6px;
+      font-size: responsive 1rem 3.75rem;
+      @mixin rem margin-bottom, 2;
+      background: white;
+      color: black;
+      font-weight: 500;
+
+      @media (--tablet) {
+        @mixin rem margin-bottom, 4;
+        &:first-child {
+          padding-right: 3rem;
+        }
+        &:nth-child(2) {
+          margin-right: -1.5rem;
+        }
+        &:last-child {
+          margin-right: 11.5rem;
+        }
+      }
+    }
+  }
+}
