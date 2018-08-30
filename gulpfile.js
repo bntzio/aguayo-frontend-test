@@ -3,8 +3,9 @@ const postcss = require('gulp-postcss')
 const atImport = require('postcss-import')
 const mixins = require('postcss-mixins')
 const cssnested = require('postcss-nested')
-const rucksack = require('rucksack-css')
 const cssnext = require('postcss-cssnext')
+const cssnano = require('cssnano')
+const rucksack = require('rucksack-css')
 const browserSync = require('browser-sync').create()
 
 gulp.task('serve', () => {
@@ -27,7 +28,8 @@ gulp.task('css', () => {
     mixins(),
     cssnested(),
     rucksack(),
-    cssnext({ browsers: ['> 5%', 'ie 8'] })
+    cssnext({ browsers: ['> 5%', 'ie 8'] }),
+    cssnano()
   ]
 
   return gulp.src('./src/styles/main.css')

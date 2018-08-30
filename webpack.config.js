@@ -5,7 +5,7 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    filename: './dist/javascripts/bundle.js'
+    filename: './dist/javascripts/bundle.min.js'
   },
   module: {
     rules: [
