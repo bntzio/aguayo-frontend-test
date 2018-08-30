@@ -7,11 +7,12 @@
     "node": ">=8.10.0"
   },
   "scripts": {
-    "build:css": "gulp",
+    "build:css:dev": "gulp --development",
+    "build:css:prod": "gulp --production",
     "build:js:dev": "webpack --mode=development --watch",
     "build:js:prod": "webpack --mode=production",
-    "dev": "npm run build:js:dev && npm run build:css",
-    "start": "npm run build:js:prod && npm run build:css"
+    "dev": "npm run build:js:dev && npm run build:css:dev",
+    "prod": "npm run build:js:prod && npm run build:css:prod"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "cssnano": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-postcss": "^8.0.0",
+    "gulp-surge": "^0.1.0",
     "minireset.css": "^0.0.3",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.0",

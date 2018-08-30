@@ -6,6 +6,7 @@ const cssnested = require('postcss-nested')
 const cssnext = require('postcss-cssnext')
 const cssnano = require('cssnano')
 const rucksack = require('rucksack-css')
+const surge = require('gulp-surge')
 const browserSync = require('browser-sync').create()
 
 gulp.task('serve', () => {
@@ -13,7 +14,7 @@ gulp.task('serve', () => {
     server: {
       baseDir: './dist'
     },
-    open: false
+    open: true
   })
 })
 
@@ -49,4 +50,15 @@ gulp.task('watch', () => {
   gulp.watch('./src/*.html').on('change', browserSync.reload)
 })
 
-gulp.task('default', ['html', 'assets', 'css', 'watch', 'serve'])
+gulp.task('deploy', () => {
+  return surge({
+    project: './dist',
+    domain: 'aguayo.surge.sh'
+  })
+})
+
+if (process.argv[2] === '--production') {
+  gulp.task('default', ['html', 'assets', 'css', 'deploy'])
+} else {
+  gulp.task('default', ['html', 'assets', 'css', 'watch', 'serve'])
+}
