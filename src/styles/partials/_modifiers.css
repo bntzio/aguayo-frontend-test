@@ -10,3 +10,8 @@
   color: var(--primaryColor) !important;
   font-weight: 700 !important;
 }
+
+.tweenEnd {
+  margin-right: 0 !important;
+  opacity: 1 !important;
+}

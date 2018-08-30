@@ -26,16 +26,31 @@
       transition: .6s ease-in-out left;
 
       @media (--tablet) {
-        display: none;
+        /* display: none; */
       }
 
       li {
-        margin: 0 !important;
         font-size: 1.2rem !important;
-        margin-bottom: 2.5rem !important;
+        margin-bottom: 2.5rem;
+        opacity: 0.3;
+        transition: .9s ease-in all;
+        margin-right: 0;
 
         &:first-child {
-          margin-top: 6rem !important;
+          margin-top: 6rem;
+          margin-right: -6rem;
+        }
+        &:nth-child(2) {
+          margin-right: -12rem;
+        }
+        &:nth-child(3) {
+          margin-right: -18rem;
+        }
+        &:nth-child(4) {
+          margin-right: -24rem;
+        }
+        &:last-child {
+          margin-right: -30rem;
         }
       }
     }
@@ -51,7 +66,6 @@
     li {
       list-style-type: none;
       @mixin rem font-size, 12;
-      @mixin rem margin-right, 18;
 
       @media (--desktop) {
         @mixin rem font-size, 14;

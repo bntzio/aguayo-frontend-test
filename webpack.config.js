@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'none',
   entry: [
-    './src/javascripts/gestures.js'
+    './src/javascripts/main.js'
   ],
   output: {
     path: __dirname,

@@ -1,0 +1,2 @@
+require('./gestures')
+require('./animations')
