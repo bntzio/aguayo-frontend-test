@@ -49,9 +49,14 @@
     }
 
     li {
-      @mixin rem font-size, 14;
-      @mixin rem margin-right, 38;
       list-style-type: none;
+      @mixin rem font-size, 12;
+      @mixin rem margin-right, 18;
+
+      @media (--desktop) {
+        @mixin rem font-size, 14;
+        @mixin rem margin-right, 38;
+      }
 
       p {
         font-weight: 500;
@@ -68,7 +73,7 @@
         color: #4a4a4a;
         font-weight: 300;
         font-family: var(--fontFamily);
-        @mixin rem font-size, 12;
+        @mixin rem font-size, 10;
         @mixin rem width, 221;
         @mixin rem height, 27;
         @mixin rem padding, 11;
@@ -80,6 +85,10 @@
         &::placeholder {
           font-family: var(--fontFamily);
           color: #4a4a4a;
+        }
+
+        @media (--desktop) {
+          @mixin rem font-size, 12;
         }
       }
       &__icon {
