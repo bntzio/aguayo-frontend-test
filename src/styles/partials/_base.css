@@ -1,0 +1,12 @@
+body {
+  background: var(--bg-body);
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily);
+  color: white;
+  width: 100%;
+  overflow-x: hidden;
+
+  @media (--tablet) {
+    overflow-x: scroll;
+  }
+}

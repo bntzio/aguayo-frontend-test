@@ -1,2 +1,6 @@
 @import "minireset.css";
+@import './partials/_variables.css';
+@import './partials/_mixins.css';
+@import './partials/_modifiers.css';
+@import './partials/_base.css';
 @import "./header";

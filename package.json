@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "description": "aguayo frontend test",
   "main": "gulpfile.js",
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "scripts": {
-    "dev": "gulp"
+    "build:js": "webpack",
+    "build:css": "gulp",
+    "start": "npm run build:js && npm run build:css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +22,10 @@
   },
   "homepage": "https://github.com/bntzio/aguayo-frontend-test#readme",
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.0",
     "browser-sync": "^2.24.7",
     "gulp": "^3.9.1",
     "gulp-postcss": "^8.0.0",
@@ -25,6 +34,12 @@
     "postcss-import": "^12.0.0",
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^3.0.0",
-    "rucksack-css": "^1.0.2"
+    "rucksack-css": "^1.0.2",
+    "standard": "^12.0.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "zingtouch": "^1.0.6"
   }
 }

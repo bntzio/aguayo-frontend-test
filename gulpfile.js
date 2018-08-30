@@ -11,7 +11,8 @@ gulp.task('serve', () => {
   browserSync.init({
     server: {
       baseDir: './dist'
-    }
+    },
+    open: false
   })
 })
 
@@ -35,10 +36,15 @@ gulp.task('css', () => {
     .pipe(browserSync.stream())
 })
 
+gulp.task('assets', () => {
+  return gulp.src('./src/assets/**/*')
+    .pipe(gulp.dest('./dist/assets'))
+})
+
 gulp.task('watch', () => {
-  gulp.watch('./src/styles/*.css', ['css'])
+  gulp.watch('./src/styles/**/*.css', ['css'])
   gulp.watch('./src/*.html', ['html'])
   gulp.watch('./src/*.html').on('change', browserSync.reload)
 })
 
-gulp.task('default', ['html', 'css', 'watch', 'serve'])
+gulp.task('default', ['html', 'assets', 'css', 'watch', 'serve'])

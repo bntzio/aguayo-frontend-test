@@ -1,0 +1,10 @@
+:root {
+  --bg-body: #fff;
+  --bg-header: #000;
+  --primaryColor: #fe7676;
+  --fontSize: 16px;
+  --fontFamily: 'Montserrat', sans-serif;
+}
+
+@custom-media --tablet (min-width: 768px);
+@custom-media --desktop (min-width: 1224px);
