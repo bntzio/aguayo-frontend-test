@@ -46,14 +46,6 @@
     li {
       @mixin rem font-size, 14;
       @mixin rem margin-right, 38;
-    }
-
-    li > h1 {
-      color: var(--primaryColor);
-      font-weight: 700;
-    }
-
-    li {
       list-style-type: none;
 
       p {

@@ -9,4 +9,9 @@ body {
   @media (--tablet) {
     overflow-x: scroll;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }

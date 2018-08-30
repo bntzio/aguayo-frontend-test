@@ -5,3 +5,8 @@
 .xIcon {
   background-image: url('/assets/icons/x.svg') !important;
 }
+
+.selected {
+  color: var(--primaryColor) !important;
+  font-weight: 700 !important;
+}
